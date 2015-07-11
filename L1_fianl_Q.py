@@ -12,7 +12,7 @@ page =('<div id="top_bin"><div id="top_content" class="width960">'
 '<div class="udacity float-left"><a href="http://udacity.com">')
 # print page
 start_link = page.find('<a href=')
-first_quote = page.find('"', start_link)
-second_quote = page.find('"', first_quote+1) # start with 'first_quote+1' instead of 'first_quote'
-url = page[first_quote+1 : second_quote]
+start_quote = page.find('"', start_link)
+end_quote = page.find('"', start_quote+1) # start with 'start_quote+1' instead of 'start_quote' to avoid finding 'start_quote' itseld
+url = page[start_quote+1 : end_quote]
 print url
