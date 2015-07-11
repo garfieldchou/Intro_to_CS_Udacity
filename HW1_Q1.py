@@ -15,9 +15,9 @@ page = """
 </html>
 """
 
-while (start_link = page.find('<a href=')) != -1:
-    # start_link = page.find('<a href=')
+while -1 != page.find('<a href='):
+    start_link = page.find('<a href=')
     start_quote = page.find('"', start_link)
-    end_quote = page.find('"', start_qoute+1)
+    end_quote = page.find('"', start_quote+1)
     print page[start_quote+1: end_quote]
     page = page[end_quote+1:]
