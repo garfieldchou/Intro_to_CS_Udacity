@@ -15,7 +15,5 @@ text = "all zip files are zipped"
 
 #ENTER CODE BELOW HERE
 
-if -1 != text[text.find('zip')+1 :].find('zip'):
-    print text[text.find('zip')+1 :].find('zip') + text.find('zip') +1
-else:
-    print -1
+first_zip = text.find('zip')
+print text.find('zip', first_zip+1)
