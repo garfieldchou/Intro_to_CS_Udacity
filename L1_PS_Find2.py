@@ -6,7 +6,7 @@
 # at least twice.
 
 # For example,
-#text = 'all zip files are zipped' 
+# text = 'all zip files are zipped' 
 # >>> 18
 # text = 'all zip files are compressed'
 # >>> -1
@@ -14,3 +14,8 @@
 text = "all zip files are zipped" 
 
 #ENTER CODE BELOW HERE
+
+if -1 != text[text.find('zip')+1 :].find('zip'):
+    print text[text.find('zip')+1 :].find('zip') + text.find('zip') +1
+else:
+    print -1
