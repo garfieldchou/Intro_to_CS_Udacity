@@ -25,8 +25,9 @@ x = 3.14159
 #ENTER CODE BELOW HERE
 
 round_num_str = str(x)
-print round_num_str
-if round_num_str[str.find('.')+1] >= 5:
+print int(round_num_str[round_num_str.find('.')+1])
+if int(round_num_str[round_num_str.find('.')+1]) >= 5:
+    round_num_str = str(x+1)
     print round_num_str[:str(x+1).find('.')]
-else
+else:
     print round_num_str[:str(x).find('.')]
