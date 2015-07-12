@@ -15,19 +15,15 @@
 
 # x = 3.14159 
 # >>> 3 (not 3.0)
-# x = 27.63 
+x = 27.499999
 # >>> 28 (not 28.0)
 # x = 3.5 
 # >>> 4 (not 4.0)
 
-x = 3.14159
+# x = 3.14159
 
 #ENTER CODE BELOW HERE
+# str_x = str(x+ 0.5)
+# print str_x[:str_x.find('.')]
 
-round_num_str = str(x)
-print int(round_num_str[round_num_str.find('.')+1])
-if int(round_num_str[round_num_str.find('.')+1]) >= 5:
-    round_num_str = str(x+1)
-    print round_num_str[:str(x+1).find('.')]
-else:
-    print round_num_str[:str(x).find('.')]
+print str(x+0.5)[:str(x+0.5).find('.')]
